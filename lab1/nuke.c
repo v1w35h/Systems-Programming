@@ -63,12 +63,9 @@ int main(int argc, char **argv){
     int iy;
     char iname[64];
 
-    // use a loop to read in data as X Y Name format the input file until EOF is reached, so it's not an infinite loop
-    while(scanf("%d %d %s", &ix, &iy, iname) != EOF){
-        // error checking to make sure that the correct data was passed
-        if(!scanf("%d %d %s", &ix, &iy, iname)){
-            return 1;
-        }
+    // use a loop to read in data as X Y Name format the input file
+    // error check input using the return value of scanf
+    while(scanf("%d %d %s", &ix, &iy, iname) == 3){
         // set the second point given from the file 
         struct Point p2;
         p2.x = ix;
@@ -82,6 +79,7 @@ int main(int argc, char **argv){
         double sv = blaststrength * pow(attenuation, d);
         
         printf("%-8s: %8.3lf Sv\n", iname, sv);
+        
     }
 
 }
