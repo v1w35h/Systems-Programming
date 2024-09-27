@@ -3,7 +3,7 @@
 #include "bufread.h"
 
 int main() {
-    // FILE *file;
+    FILE *file;
     struct BufReader *br;
     
     char filename[] = "read.txt";
