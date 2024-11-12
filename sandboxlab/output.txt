@@ -1,1 +1,1 @@
-this is into >output.txt
+this >output.txt

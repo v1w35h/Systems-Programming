@@ -72,19 +72,16 @@ void parse_commands(char *input) {
       printf("< read file\n");
       read = true;
       read_file = token+1;
-      token = strtok(NULL, " ");
 
     } else if (strncmp(token, ">>", 2) == 0) {
       printf(">> append file\n");
       append = true;
       append_file = token+1;
-      token = strtok(NULL, " ");
 
     } else if (strncmp(token, ">", 1) == 0) {
       printf("> write file\n");
       write = true;
       write_file = token+1;
-      token = strtok(NULL, " ");
 
     } else if (strncmp(token,"$", 1) == 0){
       // expand the environment variable by storing it in the input array with getenv without the $ sign
@@ -115,18 +112,13 @@ void parse_commands(char *input) {
       } else{
         //if there isn't a / just set the environment variable
         input_arr[token_count] = getenv(token);
-
       }
-      token = strtok(NULL, " ");
-
-      token_count += 1;
-    }else{
-
-      token = strtok(NULL, " ");
-
-      token_count += 1;
-      input_arr[token_count] = token;
     }
+
+    token = strtok(NULL, " ");
+
+    token_count += 1;
+    input_arr[token_count] = token;
   }
   if(read){
     printf("%s\n", read_file);
