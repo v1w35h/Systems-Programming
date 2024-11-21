@@ -1,0 +1,5 @@
+Johnny  :  824.548 Sv
+Walt    :  831.316 Sv
+Catherine:  832.169 Sv
+Jimmy   :  831.316 Sv
+Sally   :  875.032 Sv

@@ -1,1 +1,2 @@
-this >output.txt
+this into
+Wed Nov 13 02:07:06 EST 2024

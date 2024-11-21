@@ -1,0 +1,13 @@
+Vector created with capacity
+Pushing into vector
+Inserting 8 into vector.
+Successfully inserted.
+New capacity: 10, Size: 5
+Attempting to resize vector
+Vector resized!
+9 2 6 4 8 8 8 
+8 8 2 4 6 8 9 
+Vector sorted.
+Cleared the vector. Size after clear: 0
+Attempting to free the vector.
+Freed the vector.
